@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+body {
+    background: radial-gradient(circle, #75daff, #ff7eb3);
+    transition: background 0.8s ease, color 0.8s ease;
+  }
+  
+  .container,.boxes{
+    scrollbar-width: none;
+  }
+ 
+  .container::-webkit-scrollbar,.boxes::-webkit-scrollbar{
+    display: none;
+  }
+
+  
