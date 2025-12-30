@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdModeNight } from "react-icons/md";
-
+import { TiAdjustBrightness } from "react-icons/ti";
 
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
   const [todos, settodos] = useState([]);
  const [darkMode, setDarkMode] = useState(false);
  const [showfinshed,setshowfinshed]=useState(true);
+ const sign = useRef(null);
   // Load from local storage on page load
   useEffect(() => {
     let storedTodos = localStorage.getItem("todos");
@@ -65,19 +66,25 @@ function App() {
       document.getElementById('nightmode').style.background = 'radial-gradient(circle,#2e026d,#000)';
        
       document.body.classList.add("bg-night-sky"); 
-
+   
     } else {
+    
       document.body.style.background = 'radial-gradient(circle, #75daff, #ff7eb3)';
       document.body.style.color = 'black';
       document.getElementById('nightmode').style.background = 'rgba(216,181,233,0.5)';
-     
       document.body.classList.remove("bg-night-sky");
     }
 };
 
   return (
     <>
-      <nav className='navbar cursor-pointer bg-emerald-200 text-center w-full p-4 m-auto font-bold text-4xl relative bg-gradient-to-r from-blue-400 to-green-400 text-black ' ><div className="icon absolute bottom-[0px]"><img className='w-[70px]' src="/icon.png" alt="no" /></div>Todo List <div   onClick={nightmode} className='absolute right-[15px] top-[20px]'><MdModeNight /></div></nav>
+      <nav className='navbar cursor-pointer bg-emerald-200 text-center w-full p-4 m-auto font-bold text-4xl relative bg-gradient-to-r from-blue-400 to-green-400 text-black ' ><div className="icon absolute bottom-[0px]"><img className='w-[70px]' src="/icon.png" alt="no" /></div>Todo List 
+      {/* <div   onClick={nightmode} ref ={sign} className='absolute right-[15px] top-[20px]'><MdModeNight /></div>
+       */}
+      <div onClick={nightmode}  className='absolute right-[15px] top-[20px] cursor-pointer'>
+        {darkMode ? <TiAdjustBrightness className='text-[40px] text-white'/> : <MdModeNight className='text-[30px] text-black'/>}
+      </div>
+      </nav>
  
       <div id='nightmode' className="starry-bg mt-5 rounded-2xl container md:w-[60vw] m-auto h-[86vh] overflow-y-scroll flex flex-col bg-[rgba(216,181,233,0.5)] p-4 shadow-lg">
         <div className="flex justify-center text-center">
