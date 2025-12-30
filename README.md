@@ -1,12 +1,43 @@
-# React + Vite
+# 📝 OMTodo – React Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Todo List application** built using **React + Vite**.  
+It helps users manage daily tasks efficiently with features like **add, edit, delete, mark complete**, and **dark mode**.  
+All tasks are stored in **localStorage**, so data persists even after refreshing the page.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 **Demo Link:** https://omtodo.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- ➕ Add new tasks
+- ✏️ Edit existing tasks
+- 🗑️ Delete tasks with confirmation
+- ✅ Mark tasks as completed
+- 👁️ Show / hide completed tasks
+- 🌙 Dark mode & ☀️ Light mode toggle
+- 💾 Persistent storage using **localStorage**
+- 📱 Responsive UI (mobile & desktop friendly)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Icons:** React Icons
+- **State Management:** React Hooks (`useState`, `useEffect`, `useRef`)
+- **Unique IDs:** UUID
+- **Deployment:** Vercel
+
+---
+
+## 📂 Project Setup (Run Locally)
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Omprapandeep/omtodo.git
